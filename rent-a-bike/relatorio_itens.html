@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./src/visao/relatorio_itens.ts" type="module" defer></script>
+        <link rel="stylesheet" href="./estilo/estilo_relatorio_itens.css">
+        <title>TOP Itens Alugados</title>
+    </head>
+    <body>
+        <header>
+            <img src="./estilo/img/rent_a_bike_logo.png" alt="Logo" class="logo-img">
+            <div class="header-content">
+                <nav aria-label="Navegação principal">
+                    <div class="dropdown-usuario">
+                        <button class="dropbtn-usuario" id="botaoDropdownUsuario">USUÁRIO</button>
+                        <div class="dropdown-conteudo-usuario" id="dropdownConteudoUsuario"></div>
+                    </div>
+                    <a href="./cadastro_locacao.html">CADASTRO</a>
+                    <a href="./index.html">LOCAÇÕES</a>
+                    <a href="./devolucoes.html">DEVOLUÇÕES</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">RELATÓRIOS</button>
+                        <div class="dropdown-content">
+                            <a href="./relatorio_locacoes.html">Locações devolvidas</a>
+                            <a href="./relatorio_itens.html">Itens mais alugados</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <button id="botaoLogout" class="logout-btn" type="button">
+                <img src="./estilo/img/logout_icone.png" alt="Logout" class="logout-icone">
+            </button>
+        </header>
+        <h1>TOP ITENS ALUGADOS</h1>
+        <p>Sem data informada, o relatório cobre o mês atual<br>( desde o primeiro até o último dia corrente )</p>
+        <form action="" method="post">
+            <label for="dataInicio">Data inicial: </label>
+            <input type="date" id="dataInicio">
+            <label for="dataFim">Data final: </label>
+            <input type="date" id="dataFim">
+            <button type="button" id="botaoGerarRelatorio">GERAR RELATÓRIO</button> 
+        </form>
+        <div id="graficoPizza"></div>
+        <table id="tabelaRanking">
+            <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Item</th> 
+                    <th>Locações</th>
+                    <th>Participação (%)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="grafico"></div>
+    </body>
+</html>

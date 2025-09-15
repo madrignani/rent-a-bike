@@ -1,0 +1,31 @@
+{
+  "name": "rent-a-bike",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Trabalho para P1 de Projeto Integrador",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --dir test",
+    "e2e": "playwright test",
+    "start": "vite"
+  },
+  "keywords": [],
+  "author": "Giovanni Madrignani & Renan Hottz",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.7",
+    "playwright": "^1.53.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.0",
+    "dotenv": "^17.0.0"
+  }
+}

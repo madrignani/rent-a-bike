@@ -1,0 +1,25 @@
+Cenário 01: Seleciona um funcionário para cadastro de alocação --OK--
+    Dado que sou um funcionário
+    Quando eu vou registrar uma nova locação
+    Então eu seleciono meu nome em "Funcionário encarregado"
+
+Cenário 02: Seleciona um cliente para cadastro de alocação  --OK--
+    Dado que sou um funcionário
+    Quando eu vou registrar uma nova locação
+    Então eu busco o cliente da locação pelo código ou CPF
+
+Cenário 03: Seleciona os itens para cadastro de alocação --OK--
+    Dado que sou um funcionário
+    Quando eu vou registrar uma nova locação
+    Então eu busco o item por código
+    E os adiciono para a locação
+
+Cenário 04: Gera resumo para cadastro de alocação --OK--
+    Dado que sou um funcionário
+    Antes de registrar uma locação
+    Eu aciono o resumo da locação
+
+Cenário 05: Registra a locação --OK--
+    Dado que sou um funcionário
+    Quando eu tenho os dados corretos para a locação
+    Eu a registro no sistema

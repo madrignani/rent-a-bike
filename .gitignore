@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+#constantes secretas
+.env
+
+# Arquivos de configuração do sistema
+rent-a-bike/node_modules
+rent-a-bike/playwright.config.ts
+rent-a-bike/pnpm-lock.yaml
+rent-a-bike/package-lock.json
+rent-a-bike/tsconfig.json
+rent-a-bike/src/vite-env.d.ts
+api/vendor
+api/composer.lock
+dist
+dist-ssr
+*.local
+
+# Arquivos gerados por testes do sistema
+rent-a-bike/test-results
+rent-a-bike/e2e/.auth
+
+# Arquivos para popular tabelas (para testar o programa)
+api/db/teste
+
+# Diretório com fotos para serem adicionadas quando criam-se Avarias.
+api/fotos/upload
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

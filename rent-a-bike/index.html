@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./src/visao/listagem_locacao.ts" type="module" defer></script>
+        <link rel="stylesheet" href="./estilo/estilo_listagem_locacao.css">
+        <title>Listagem de locações</title>
+    </head>
+    <body>
+        <header>
+            <img src="./estilo/img/rent_a_bike_logo.png" alt="Logo" class="logo-img">
+            <div class="header-content">
+                <nav aria-label="Navegação principal">
+                    <div class="dropdown-usuario">
+                        <button class="dropbtn-usuario" id="botaoDropdownUsuario">USUÁRIO</button>
+                        <div class="dropdown-conteudo-usuario" id="dropdownConteudoUsuario"></div>
+                    </div>
+                    <a href="./cadastro_locacao.html">CADASTRO</a>
+                    <a href="./index.html">LOCAÇÕES</a>
+                    <a href="./devolucoes.html">DEVOLUÇÕES</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">RELATÓRIOS</button>
+                        <div class="dropdown-content">
+                            <a href="./relatorio_locacoes.html">Locações devolvidas</a>
+                            <a href="./relatorio_itens.html">Itens mais alugados</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <button id="botaoLogout" class="logout-btn" type="button">
+                <img src="./estilo/img/logout_icone.png" alt="Logout" class="logout-icone">
+            </button>
+        </header>
+        <main>
+            <h1>LOCAÇÕES</h1>
+            <div class="filtro-container">
+                <label for="filtroLocacao">Filtrar por CPF do cliente ou ID da locação:</label>
+                <input type="text" id="filtroLocacao" placeholder="Digite CPF ou ID">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Locação</th> 
+                        <th>Horas alugadas</th>
+                        <th>Devolução esperada</th>
+                        <th>Cliente</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </main>
+    </body>
+</html>

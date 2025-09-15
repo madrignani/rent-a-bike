@@ -1,0 +1,4 @@
+Cenário 01: Exibe todos as locações ao carregar a página --OK--
+    Dado que sou um funcionário
+    Quando eu acesso a página inicial do sistema
+    Então eu espero que os dados estejam devidamente exibidos e ordenados

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/visao/cadastro_devolucao.ts" type="module" defer></script>
+    <link rel="stylesheet" href="./estilo/estilo_cadastro_devolucao.css">
+    <title>Cadastro de devolução</title>
+  </head>
+  <body>
+      <header>
+          <img src="./estilo/img/rent_a_bike_logo.png" alt="Logo" class="logo-img">
+          <div class="header-content">
+              <nav aria-label="Navegação principal">
+                  <div class="dropdown-usuario">
+                      <button class="dropbtn-usuario" id="botaoDropdownUsuario">USUÁRIO</button>
+                      <div class="dropdown-conteudo-usuario" id="dropdownConteudoUsuario"></div>
+                  </div>
+                  <a href="./cadastro_locacao.html">CADASTRO</a>
+                  <a href="./index.html">LOCAÇÕES</a>
+                  <a href="./devolucoes.html">DEVOLUÇÕES</a>
+                  <div class="dropdown">
+                      <button class="dropbtn">RELATÓRIOS</button>
+                      <div class="dropdown-content">
+                          <a href="./relatorio_locacoes.html">Locações devolvidas</a>
+                          <a href="./relatorio_itens.html">Itens mais alugados</a>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+          <button id="botaoLogout" class="logout-btn" type="button">
+              <img src="./estilo/img/logout_icone.png" alt="Logout" class="logout-icone">
+          </button>
+      </header>
+    <main>
+      <h1>CADASTRO DE DEVOLUÇÃO</h1>
+      <section id="infoLocacao">
+        <p><strong>ID da Locação:</strong> <span id="idLocacao">...</span></p>
+        <p><strong>Hora da Devolução:</strong> <span id="horaDevolucao">...</span></p>
+      </section>
+      <section id="itensLocacao">
+        <h2>ITENS DA LOCAÇÃO</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor/Hora</th>
+              <th>Avarias</th>
+              <th>Limpeza</th>
+              <th>Subtotal</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaItens">
+          </tbody>
+        </table>
+      </section>
+      <section id="resumoFinanceiro">
+        <h2>Resumo Financeiro</h2>
+        <div>
+          <p><strong>Desconto:</strong> <span id="valorDesconto">0,00</span></p>
+          <p><strong>Total a Pagar:</strong> <span id="valorTotal">0,00</span></p>
+        </div>
+      </section>
+      <button type="button" id="botaoConfirmarDevolucao">Confirmar Devolução</button>
+    </main>
+    <div id="modalAvaria" class="modal hidden">
+      <div class="modal-content">
+        <form id="formAvaria">
+          <p id="tituloAvaria" class="titulo-modal">Lançar Avaria</p>
+          <input type="hidden" id="idItemAvaria" />
+          <label for="avaliador">Avaliador:</label>
+          <select id="avaliador" required></select>
+          <label for="descricaoAvaria">Descrição:</label>
+          <input type="text" id="descricaoAvaria" required placeholder="Descrição da avaria"/>
+          <label for="fotoAvaria">Foto da Avaria (.jpg apenas):</label>
+          <input type="file" id="fotoAvaria" accept=".jpg,image/jpeg" required />
+          <label for="valorAvaria">Valor a Cobrar:</label>
+          <input type="number" id="valorAvaria" step="0.01" min="0" required />
+          <div class="modal-buttons">
+            <button type="submit">Salvar Avaria</button>
+            <button type="button" id="cancelarAvaria">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
